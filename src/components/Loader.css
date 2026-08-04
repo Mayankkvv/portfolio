@@ -1,0 +1,22 @@
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loader-text {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  display: flex;
+  gap: 6px;
+}
+
+.loader-bracket {
+  color: var(--color-accent);
+}
