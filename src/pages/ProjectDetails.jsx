@@ -46,7 +46,7 @@ function ProjectDetails() {
       </div>
 
       <div className="project-details-image">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title} loading="lazy" />
       </div>
 
       <div className="project-details-section">
@@ -82,7 +82,7 @@ function ProjectDetails() {
       <div className="project-details-section">
         <h2>Architecture</h2>
         <div className="project-details-image">
-          <img src={project.architectureImage} alt={`${project.title} architecture diagram`} />
+          <img src={project.architectureImage} alt={`${project.title} architecture diagram`} loading="lazy" />
         </div>
       </div>
     </motion.div>

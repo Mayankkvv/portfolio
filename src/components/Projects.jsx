@@ -22,7 +22,7 @@ function ProjectCard({ project, index }) {
     >
       <Link to={`/projects/${project.id}`} className="project-card-link">
         <div className="project-image-wrapper">
-          <img src={project.image} alt={project.title} className="project-image" />
+          <img src={project.image} alt={project.title} className="project-image" loading="lazy" />
         </div>
         <div className="project-card-body">
           <h3>{project.title}</h3>
