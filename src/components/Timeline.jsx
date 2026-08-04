@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import timeline from '../utils/timelineData'
 import './Timeline.css'
+import RevealText from './RevealText'
 
 function Timeline() {
   return (
     <section id="timeline" className="timeline-section">
-      <h2 className="section-title">Timeline</h2>
+      <h2 className="section-title"><RevealText text="Timeline" /></h2>
       <div className="timeline-track">
         {timeline.map((item, i) => (
           <motion.div

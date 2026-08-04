@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import projects from '../utils/projectsData'
 import useTilt from '../hooks/useTilt'
 import './Projects.css'
+import RevealText from './RevealText'
 
 function ProjectCard({ project, index }) {
   const { ref, rotateX, rotateY, handleMouseMove, handleMouseLeave } = useTilt()
@@ -53,7 +54,7 @@ function ProjectCard({ project, index }) {
 function Projects() {
   return (
     <section id="projects" className="projects">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title"><RevealText text="Projects" /></h2>
       <div className="projects-grid">
         {projects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />

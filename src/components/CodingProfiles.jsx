@@ -3,6 +3,7 @@ import { SiLeetcode, SiCodeforces, SiCodechef } from 'react-icons/si'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import codingProfiles from '../utils/codingProfilesData'
 import './CodingProfiles.css'
+import RevealText from './RevealText'
 
 const icons = {
   LeetCode: SiLeetcode,
@@ -14,7 +15,7 @@ const icons = {
 function CodingProfiles() {
   return (
     <section id="coding-profiles" className="coding-profiles">
-      <h2 className="section-title">Coding Profiles</h2>
+      <h2 className="section-title"><RevealText text="Coding Profiles" /></h2>
       <div className="coding-profiles-grid">
         {codingProfiles.map((profile, i) => {
           const Icon = icons[profile.platform]

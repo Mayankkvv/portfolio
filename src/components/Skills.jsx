@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import './Skills.css'
+import RevealText from './RevealText'
 
 const skillGroups = [
   { category: 'Languages', items: ['C++', 'JavaScript', 'Python', 'Java'] },
@@ -14,7 +15,7 @@ const skillGroups = [
 function Skills() {
   return (
     <section id="skills" className="skills">
-      <h2 className="section-title">Skills</h2>
+      <h2 className="section-title"><RevealText text="Skills" /></h2>
       <div className="skills-grid">
         {skillGroups.map((group, i) => (
           <motion.div

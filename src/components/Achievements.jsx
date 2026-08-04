@@ -2,11 +2,12 @@ import { motion } from 'framer-motion'
 import { FaTrophy } from 'react-icons/fa'
 import achievements from '../utils/achievementsData'
 import './Achievements.css'
+import RevealText from './RevealText'
 
 function Achievements() {
   return (
     <section id="achievements" className="achievements">
-      <h2 className="section-title">Achievements</h2>
+      <h2 className="section-title"><RevealText text="Achievements" /></h2>
       <div className="achievements-grid">
         {achievements.map((item, i) => (
           <motion.div

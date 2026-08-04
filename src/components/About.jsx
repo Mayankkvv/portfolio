@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import './About.css'
+import RevealText from './RevealText'
 
 const aboutCards = [
   {
@@ -23,7 +24,7 @@ const aboutCards = [
 function About() {
   return (
     <section id="about" className="about">
-      <h2 className="section-title">About</h2>
+      <h2 className="section-title"><RevealText text="About" /></h2>
       <div className="about-grid">
         {aboutCards.map((card, i) => (
           <motion.div

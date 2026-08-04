@@ -3,7 +3,8 @@ import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import useRotatingText from "../hooks/useRotatingText";
 import NetworkBackground from "../animations/NetworkBackground";
 import "./Hero.css";
-import RippleButton from './RippleButton'
+import RippleButton from "./RippleButton";
+import RevealText from "./RevealText";
 
 const roles = [
   "Software Engineer",
@@ -29,7 +30,9 @@ function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <p className="hero-greeting">Hi, I'm</p>
-          <h1 className="hero-name">Mayank Kumar</h1>
+          <h1 className="hero-name">
+            <RevealText text="Mayank Kumar" />
+          </h1>
 
           <motion.p
             key={currentRole}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import RippleButton from './RippleButton'
+import RevealText from './RevealText'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="section-title"><RevealText text="Contact" /></h2>
       <motion.form
         className="contact-form"
         onSubmit={handleSubmit}
