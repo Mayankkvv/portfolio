@@ -1,33 +1,41 @@
-import { Suspense, lazy, useState, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Loader from './components/Loader'
-import './App.css'
+import { Suspense, lazy, useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Loader from "./components/Loader";
+import "./App.css";
+//import { useEffect } from "react";
+import { initAnalytics, trackPageView } from "./utils/analytics";
 
-const ProjectDetails = lazy(() => import('./pages/ProjectDetails'))
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -12 },
-}
+};
 
 function App() {
-  const location = useLocation()
-  const [loading, setLoading] = useState(true)
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1200)
-    return () => clearTimeout(timer)
-  }, [])
+    initAnalytics();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      <AnimatePresence>
-        {loading && <Loader key="loader" />}
-      </AnimatePresence>
+      <AnimatePresence>{loading && <Loader key="loader" />}</AnimatePresence>
 
       {!loading && (
         <>
@@ -43,7 +51,7 @@ function App() {
                       initial="initial"
                       animate="animate"
                       exit="exit"
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
                       <Home />
                     </motion.div>
@@ -57,7 +65,7 @@ function App() {
                       initial="initial"
                       animate="animate"
                       exit="exit"
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
                       <ProjectDetails />
                     </motion.div>
@@ -69,7 +77,7 @@ function App() {
         </>
       )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
