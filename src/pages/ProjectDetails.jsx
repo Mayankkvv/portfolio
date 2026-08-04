@@ -1,20 +1,23 @@
-import { useParams, Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa'
-import projects from '../utils/projectsData'
-import '../components/ProjectDetails.css'
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from "react-icons/fa";
+import projects from "../utils/projectsData";
+import "../components/ProjectDetails.css";
+import AnimatedCounter from "../components/AnimatedCounter";
 
 function ProjectDetails() {
-  const { projectId } = useParams()
-  const project = projects.find((p) => p.id === projectId)
+  const { projectId } = useParams();
+  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     return (
       <div className="project-not-found">
         <h1>Project not found</h1>
-        <Link to="/" className="project-details-back">← Back to home</Link>
+        <Link to="/" className="project-details-back">
+          ← Back to home
+        </Link>
       </div>
-    )
+    );
   }
 
   return (
@@ -72,7 +75,9 @@ function ProjectDetails() {
         <div className="project-details-metrics">
           {project.metrics.map((m) => (
             <div key={m.label} className="metric-block">
-              <div className="metric-value">{m.value}</div>
+              <div className="metric-value">
+                <AnimatedCounter value={m.value} />
+              </div>
               <div className="metric-label">{m.label}</div>
             </div>
           ))}
@@ -82,11 +87,15 @@ function ProjectDetails() {
       <div className="project-details-section">
         <h2>Architecture</h2>
         <div className="project-details-image">
-          <img src={project.architectureImage} alt={`${project.title} architecture diagram`} loading="lazy" />
+          <img
+            src={project.architectureImage}
+            alt={`${project.title} architecture diagram`}
+            loading="lazy"
+          />
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
-export default ProjectDetails
+export default ProjectDetails;
