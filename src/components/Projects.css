@@ -16,6 +16,8 @@
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .project-card:hover {
