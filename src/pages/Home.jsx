@@ -1,10 +1,11 @@
+import Hero from '../components/Hero'
+
 function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>This will become the hero, about, skills, and contact sections.</p>
+      <Hero />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
