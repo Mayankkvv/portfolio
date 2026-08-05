@@ -28,6 +28,16 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
+          <motion.div
+            className="hero-status-banner"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <span className="status-dot" />
+            <span>Open to Internships & Opportunities</span>
+          </motion.div>
+
           <p className="hero-greeting">Hi, I'm</p>
           <h1 className="hero-name">
             <RevealText text="Mayank Kumar" />
