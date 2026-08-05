@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import './About.css'
 import RevealText from './RevealText'
-import CarAnimation from './CarAnimation'
 
 const aboutCards = [
   {
@@ -45,7 +44,6 @@ const bioText = (
 function About() {
   return (
     <section id="about" className="about">
-      <CarAnimation />
       <h2 className="section-title"><RevealText text="About" /></h2>
 
       <div className="about-bio-wrapper">
