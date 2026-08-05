@@ -13,7 +13,7 @@ const aboutCards = [
   },
   {
     title: 'Interests',
-    body: 'Competitive programming, system design, and building autonomous agents that can reason and act on real tasks.',
+    body: 'Data structures & algorithms, competitive programming, backend development, AI engineering, and building autonomous agents that can reason and act on real tasks.',
   },
   {
     title: 'Tech Philosophy',

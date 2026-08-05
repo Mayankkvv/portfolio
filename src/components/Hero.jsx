@@ -13,7 +13,6 @@ const roles = [
   "AI Engineer",
   "ML Engineer",
   "Agentic AI Builder",
-  "System Design Enthusiast",
 ];
 
 function Hero() {
