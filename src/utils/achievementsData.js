@@ -8,12 +8,12 @@ const achievements = [
     description: 'Reached a CodeChef rating of 1602 (3-star).',
   },
   {
-    title: 'Decode X',
-    description: 'PLACEHOLDER — tell me what this achievement was and I\'ll fill in the real description.',
+    title: 'Decode X Finalist',
+    description: 'Selected as a finalist and qualified for the on-campus round in the Decode X hackathon.',
   },
   {
-    title: 'Codeforces',
-    description: 'PLACEHOLDER — tell me your Codeforces rank/rating milestone and I\'ll fill in the real description.',
+    title: 'Codeforces Pupil',
+    description: 'Reached Pupil rank on Codeforces with a max rating of 1276.',
   },
 ]
 
