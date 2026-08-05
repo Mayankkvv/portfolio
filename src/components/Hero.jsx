@@ -21,10 +21,13 @@ function Hero() {
   return (
     <section className="hero">
       <NetworkBackground />
+      <div className="hero-ambient-glow hero-ambient-glow-1" />
+      <div className="hero-ambient-glow hero-ambient-glow-2" />
+
       <div className="hero-inner">
         <motion.div
           className="hero-content"
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
@@ -96,8 +99,32 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-          whileHover={{ scale: 1.03 }}
+          whileHover={{ scale: 1.02 }}
         >
+          <motion.div
+            className="hero-floating-badge badge-1"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <span>⚡</span> Backend & Systems
+          </motion.div>
+
+          <motion.div
+            className="hero-floating-badge badge-2"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <span>🤖</span> Agentic AI Builder
+          </motion.div>
+
+          <motion.div
+            className="hero-floating-badge badge-3"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          >
+            <span>🏆</span> Codeforces Pupil
+          </motion.div>
+
           <div className="hero-photo-frame">
             <img
               src="/profile-placeholder.jpg"

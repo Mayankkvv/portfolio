@@ -1,13 +1,47 @@
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--spacing-nav-height));
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 24px;
-  padding-top: var(--spacing-nav-height);
+  padding-top: calc(var(--spacing-nav-height) + 32px);
   max-width: var(--max-content-width);
   margin: 0 auto;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(129, 140, 248, 0.08) 50%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  animation: pulseGlow 6s ease-in-out infinite alternate;
+}
+
+.hero-ambient-glow-1 {
+  top: 5%;
+  left: -120px;
+}
+
+.hero-ambient-glow-2 {
+  top: 10%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9) translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.18) translateY(-25px);
+    opacity: 0.95;
+  }
 }
 
 .hero-inner {
@@ -140,6 +174,7 @@
 }
 
 .hero-photo-wrapper {
+  position: relative;
   flex-shrink: 0;
 }
 
@@ -165,7 +200,44 @@
   display: block;
 }
 
+.hero-floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: rgba(18, 18, 26, 0.88);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  backdrop-filter: blur(12px);
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.15);
+  z-index: 4;
+  white-space: nowrap;
+}
+
+.hero-floating-badge.badge-1 {
+  top: -12px;
+  right: -20px;
+}
+
+.hero-floating-badge.badge-2 {
+  bottom: 20px;
+  left: -32px;
+}
+
+.hero-floating-badge.badge-3 {
+  top: 45%;
+  right: -40px;
+}
+
 @media (max-width: 900px) {
+  .hero {
+    padding-top: calc(var(--spacing-nav-height) + 20px);
+  }
+
   .hero-inner {
     flex-direction: column-reverse;
     text-align: center;
@@ -178,5 +250,19 @@
   .hero-photo-frame {
     width: 240px;
     height: 240px;
+  }
+
+  .hero-floating-badge.badge-1 {
+    top: -10px;
+    right: -10px;
+  }
+
+  .hero-floating-badge.badge-2 {
+    bottom: -10px;
+    left: -10px;
+  }
+
+  .hero-floating-badge.badge-3 {
+    display: none;
   }
 }
