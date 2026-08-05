@@ -6,7 +6,7 @@ const projects = [
       "A Zapier/n8n-style visual workflow builder with real AI integrations",
     image: "/projects/workflow-automation-placeholder.jpg",
     github: "https://github.com/Mayankkvv",
-    demo: "",
+    demo: "https://ai-workflow-platform-three.vercel.app/",
     techStack: [
       "MongoDB Atlas",
       "Express",
@@ -59,7 +59,7 @@ const projects = [
       "A three-agent Planner–Researcher–Critic pipeline for autonomous research tasks",
     image: "/projects/research-agent-placeholder.jpg",
     github: "https://github.com/Mayankkvv",
-    demo: "",
+    demo: "https://autonomous-ai-agent-n80y.onrender.com/ui",
     techStack: ["Python", "FastAPI", "Groq", "LLaMA 3"],
     features: [
       "Three-agent Planner-Researcher-Critic pipeline",
@@ -79,7 +79,7 @@ const projects = [
       "Real-time price optimization engine using demand elasticity ML models and Multi-Armed Bandits with business guardrails",
     image: "/projects/dynamic-pricing-placeholder.jpg",
     github: "https://github.com/Mayankkvv/dynamic-pricing-engine",
-    demo: "",
+    demo: "https://dynamic-pricing-engine-nz3sxrnskubqfgkn5tdjx8.streamlit.app/",
     techStack: ["Python", "FastAPI", "Redis", "XGBoost", "PyTorch", "Docker"],
     features: [
       "Demand elasticity modeling (dQ/dP) paired with Thompson Sampling for exploration",
@@ -99,7 +99,7 @@ const projects = [
       "End-to-end churn prediction and user retention analytics pipeline leveraging Tree-based Ensemble Models and SHAP explainability",
     image: "/projects/netflix-retention-placeholder.jpg",
     github: "https://github.com/Mayankkvv/netflix-retention-ml",
-    demo: "",
+    demo: "https://netflix-retention-ml-khqf7puciigqudoxqrvabt.streamlit.app/",
     techStack: [
       "Python",
       "Scikit-Learn",
