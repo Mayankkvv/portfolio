@@ -1,7 +1,7 @@
 .achievements {
   max-width: var(--max-content-width);
   margin: 0 auto;
-  padding: 100px 24px;
+  padding: 50px 24px;
 }
 
 .achievements-grid {
