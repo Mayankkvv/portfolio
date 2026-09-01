@@ -133,3 +133,14 @@
   text-align: center;
   padding: 200px 24px;
 }
+
+.project-details-description p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.project-details-description p:last-child {
+  margin-bottom: 0;
+}

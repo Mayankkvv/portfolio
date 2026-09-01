@@ -52,6 +52,21 @@ function ProjectDetails() {
         <img src={project.image} alt={project.title} loading="lazy" />
       </div>
 
+      {project.description && (
+        <div className="project-details-section">
+          <h2>Overview</h2>
+          <div className="project-details-description">
+            {Array.isArray(project.description) ? (
+              project.description.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))
+            ) : (
+              <p>{project.description}</p>
+            )}
+          </div>
+        </div>
+      )}
+
       <div className="project-details-section">
         <h2>Tech Stack</h2>
         <div className="project-details-tech-row">

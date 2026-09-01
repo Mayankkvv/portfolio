@@ -1,5 +1,55 @@
 const projects = [
   {
+    id: "sync-engine",
+    title: "Sync Engine",
+    tagline:
+      "Real-time collaborative document editing with a custom-built CRDT for conflict resolution — the engineering behind Google Docs, engineered from first principles.",
+    image: "/projects/sync-engine-placeholder.jpg",
+    github: "https://github.com/Mayankkvv/sync-engine",
+    demo: "https://sync-engine-sigma.vercel.app/",
+    techStack: [
+      "React",
+      "Node.js",
+      "WebSocket (ws)",
+      "Custom CRDT",
+      "Vite",
+      "Tailwind CSS",
+      "CodeMirror",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcrypt",
+      "Jest",
+      "Supertest",
+      "Vercel",
+      "Render",
+    ],
+    description: [
+      "Sync Engine is a full-stack, real-time collaborative document editor that lets multiple people edit the same document simultaneously and see each other's changes appear instantly — the same category of problem behind Google Docs, built entirely from scratch to understand how it actually works under the hood, rather than relying on an existing collaboration library.",
+      "At its core is a custom Conflict-free Replicated Data Type (CRDT), hand-implemented without any third-party CRDT library. Instead of representing a document as plain text, it's modeled as a linked structure of uniquely identified characters, where deletions are tombstoned rather than removed and concurrent edits at the same position are resolved through a deterministic tie-breaking rule. This guarantees that every connected client converges to the exact same final document, regardless of network timing or the order operations arrive in — a property proven through automated tests that simulate multiple clients applying conflicting edits in different orders.",
+      "The application supports live presence (who's currently viewing a document), animated typing indicators, and real-time collaborator cursors rendered directly inside the editor. Editing continues seamlessly even while offline: changes are queued locally and automatically merged back in once the connection is restored, using the same CRDT logic that resolves live conflicts. Every edit is also permanently recorded in an event-sourced operation log, enabling users to preview and restore any past version of a document — restoring is computed as a genuine diff and broadcast live, not a silent overwrite.",
+      "Access control is built around real ownership and sharing: each document has an owner who can invite specific existing users as collaborators, with permissions enforced independently at both the REST API layer and the WebSocket connection layer — closing the gap where securing only one entry point would leave the other open. Authentication uses hashed passwords (bcrypt) and JWTs, with a secure password-reset flow (cryptographically random, hashed, single-use, time-limited tokens) and rate-limited login endpoints to resist brute-force attempts.",
+      "The project is backed by 16 automated tests (Jest and Supertest) covering CRDT convergence under concurrent operations, full REST API behavior including access control, and a real two-client WebSocket integration test — and is fully deployed, with the React frontend on Vercel and the Node/Express backend on Render."
+    ],
+    features: [
+      "Real-time collaborative editing over WebSockets with live sync, presence indicators, typing indicators, and collaborator cursor positions",
+      "Custom CRDT built from scratch — no external conflict-resolution library — with proven deterministic convergence under concurrent edits",
+      "Offline editing with automatic reconnection and merge, so edits made without a connection are never lost",
+      "Event-sourced version history with point-in-time preview and live, broadcast restoration of past versions",
+      "Invite-based document sharing with owner/collaborator permission tiers, enforced independently across REST and WebSocket layers",
+      "Secure authentication — bcrypt password hashing, JWT sessions, rate-limited login, and a hashed single-use password reset flow",
+      "Automated test suite (Jest + Supertest) covering algorithm correctness, API authorization, and multi-client concurrency",
+      "Fully deployed production build across Vercel, Render, and MongoDB Atlas",
+    ],
+    metrics: [
+      { label: "Automated Tests", value: "16" },
+      { label: "Conflict Resolution", value: "Custom CRDT" },
+    ],
+    architectureImage:
+      "/projects/sync-engine-architecture-placeholder.jpg",
+  },
+  {
     id: "workflow-automation-platform",
     title: "AI Workflow Automation Platform",
     tagline:
