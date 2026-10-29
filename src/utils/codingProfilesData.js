@@ -10,9 +10,9 @@ const codingProfiles = [
     handle: 'M_a_y_a_n_k23',
     url: 'https://codeforces.com/profile/M_a_y_a_n_k23',
     stats: [
-      { label: 'Rank', value: 'Pupil' },
-      { label: 'Rating', value: '1197' },
-      { label: 'Max Rating', value: '1276' },
+      { label: 'Rank', value: 'Specialist' },
+      { label: 'Rating', value: '1400' },
+      { label: 'Max Rating', value: '1400' },
     ],
   },
   {
