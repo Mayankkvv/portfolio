@@ -12,8 +12,8 @@ const achievements = [
     description: 'Selected as a finalist and qualified for the on-campus round in the Decode X hackathon.',
   },
   {
-    title: 'Codeforces Pupil',
-    description: 'Reached Pupil rank on Codeforces with a max rating of 1276.',
+    title: 'Codeforces Specialist',
+    description: 'Reached Specialist rank on Codeforces with a max rating of 1400.',
   },
 ]
 

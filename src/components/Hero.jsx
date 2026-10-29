@@ -122,7 +122,7 @@ function Hero() {
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           >
-            <span>🏆</span> Codeforces Pupil
+            <span>🏆</span> Codeforces Specialist
           </motion.div>
 
           <div className="hero-photo-frame">
